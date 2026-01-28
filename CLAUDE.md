@@ -1,5 +1,24 @@
 # MeetCode - Competitive Coding Practice
 
+## Project Structure
+
+Problems are organized by category in `problems/` directory:
+```
+problems/
+├── arrays/          # Array manipulation, intervals, etc.
+├── strings/         # String problems
+├── two_pointers/    # Two-pointer technique problems
+├── sliding_window/  # Sliding window problems
+├── linked_lists/    # Linked list problems
+├── heap/            # Heap/Priority queue problems
+└── [new_category]/  # Add as needed
+```
+
+When creating a new problem file:
+1. Identify the primary technique/data structure
+2. Place in appropriate category folder
+3. Use snake_case for filename (e.g., `k_pairs_smallest_sums.py`)
+
 ## CRITICAL RULES FOR CLAUDE CODE
 
 ### NEVER Write Solutions
@@ -20,9 +39,17 @@
 - Level 3: Algorithm pattern name (e.g., "Two-pointer technique")
 - Never beyond Level 3
 
+## Testing Protocol
+
+When asked to test a solution:
+1. **First check for syntax errors** using `python -m py_compile <file>`
+2. **If syntax is valid**, proceed to run tests
+3. **Always activate venv first**: `source venv/bin/activate`
+
 ## Commands
 
 ```bash
+source venv/bin/activate                  # Always activate first
 python runner.py <problem_file.py>        # Run tests
 python runner.py <problem_file.py> -v     # Verbose output
 ```

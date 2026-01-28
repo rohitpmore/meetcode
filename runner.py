@@ -40,7 +40,11 @@ def run_tests(file_path: str, verbose: bool = False):
         print("Error: No 'TEST_CASES' found in problem file")
         return False
 
-    solution = module.solution
+    # Use solution_wrapper if available (for tree/graph problems), else solution
+    if hasattr(module, 'solution_wrapper'):
+        solution = module.solution_wrapper
+    else:
+        solution = module.solution
     test_cases = module.TEST_CASES
 
     print(f"\n{'='*50}")
@@ -60,8 +64,9 @@ def run_tests(file_path: str, verbose: bool = False):
             result = solution(*inputs)
             elapsed = (time.perf_counter() - start) * 1000
 
-            # Check result
-            if result == expected:
+            # Check result (use custom compare if available)
+            compare_fn = getattr(module, 'compare_results', lambda a, e: a == e)
+            if compare_fn(result, expected):
                 passed += 1
                 status = "PASS"
                 if verbose:
