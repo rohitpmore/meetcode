@@ -77,3 +77,12 @@ TEST_CASES = [
     (([3,2,4], 6), [1,2]),
 ]
 ```
+
+## Problems to Revisit (Needed Hints)
+
+Track problems where hints were requested. Revisit these later for reinforcement.
+
+| Problem | Category | Hint Level | Date |
+|---------|----------|------------|------|
+| Decode String | strings | Level 3 | 2026-02-02 |
+| Exclusive Time of Functions | stacks | Level 3 | 2026-02-02 |

@@ -48,8 +48,12 @@ Constraints:
 ajajbaxbaxbax
 
 3[a2[c]]
-3[acc]
 accaccacc
+st = ["",3]
+
+cur_str = acc
+cur_num = 0
+
 """
 
 from collections import deque
@@ -58,7 +62,32 @@ def solution(s: str) -> str:
     """
     Decode the encoded string and return the result.
     """
+    # time = O(n)
+    # space = O(n)
     st = deque()
+    cur_str = []
+    cur_num = 0
+
+    for ch in s: # n
+        if ch >= 'a' and ch <= 'z':
+            cur_str.append(ch)
+        if ch >= '0' and ch <= '9':
+            cur_num = cur_num * 10 + int(ch)
+        if ch == '[':
+            st.append([cur_str, cur_num])
+            cur_str = []
+            cur_num = 0
+        if ch == ']':
+            [prev_str, prev_num] = st.pop()
+            cur_str = prev_str + cur_str * prev_num
+
+
+    return ''.join(cur_str)
+
+
+
+
+
     
 
 
