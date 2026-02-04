@@ -86,3 +86,6 @@ Track problems where hints were requested. Revisit these later for reinforcement
 |---------|----------|------------|------|
 | Decode String | strings | Level 3 | 2026-02-02 |
 | Exclusive Time of Functions | stacks | Level 3 | 2026-02-02 |
+| Graph Valid Tree | graphs | Level 2 | 2026-02-04 |
+| Tree Diameter | graphs | Level 3 | 2026-02-04 |
+| Tree Diameter (DFS) | graphs | Level 3 | 2026-02-04 |
