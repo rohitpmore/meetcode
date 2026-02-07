@@ -89,3 +89,4 @@ Track problems where hints were requested. Revisit these later for reinforcement
 | Graph Valid Tree | graphs | Level 2 | 2026-02-04 |
 | Tree Diameter | graphs | Level 3 | 2026-02-04 |
 | Tree Diameter (DFS) | graphs | Level 3 | 2026-02-04 |
+| Lowest Common Ancestor | trees | Level 3 | 2026-02-06 |
